@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- Copyright (c) 2017-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+	<!-- See LICENSE URL <https://store.webkul.com/license.html/> for full copyright and licensing details. -->
+	<record id="ts_signup.custom_res_conf_login_ts" model="ir.ui.view">
+		<field name="name">res.config.settings.view.form.inherit.auth.oauth.test</field>
+		<field name="model">res.config.settings</field>
+		<field name="inherit_id" ref="auth_oauth.res_config_settings_view_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//div[hasclass('settings')]//div[hasclass('app_settings_block')]//div[@id='module_auth_oauth']/.." position="after">
+				<h2>Login with social</h2>
+				<div class="row mt16 o_settings_container mb16" name="website_ajax_login">
+					<div class="col-12 col-lg-6 o_setting_box">
+						<div class="o_setting_left_pane">
+							<field name="website_ts24_login"/>
+						</div>
+						<div class="o_setting_right_pane">
+							<label string="TS24 Authentication" for="website_ts24_login"/>
+							<div class="text-muted">
+								Allow users to sign in with their TS24 Pro account
+							</div>
+							<div class="content-group" attrs="{'invisible': [('website_ts24_login','=',False)]}">
+								<div class="row mt16">
+									<label for="ts24_client_id" string="Auth password:" class="col-lg-3 o_light_label"/>
+									<field name="ts24_client_id" placeholder="e.g. 1234-xyz-ts24"/>
+								</div>
+								<div class="row mt16">
+									<label for="ts24_api_url" string="Auth api url:" class="col-lg-3 o_light_label"/>
+									<field name="ts24_api_url" placeholder="e.g. 1234-xyz-ts24"/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</xpath>
+		</field>
+	</record>
+</odoo>

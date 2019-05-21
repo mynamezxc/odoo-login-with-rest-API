@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_frontend" inherit_id="web.assets_frontend" name="OAuth Providers Assets">
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss" href="/ts_signup/static/src/css/login.css"/>
+        </xpath>
+    </template>
+</odoo>
+<!--<?xml version="1.0" encoding="UTF-8" ?>-->
+<!--<odoo>-->
+    <!--<data>-->
+
+        <!--<template id="ts_signup.add_custom_login_social" inherit_id="web.login">-->
+            <!--<xpath expr="//button[@type='submit']/.." position="after">-->
+                <!--&lt;!&ndash;<button type="button" class="btn btn-primary btn-block" onclick="window.location.href = '/web/ts24-signin'">Login with TS24 account</button>&ndash;&gt;-->
+                <!--<div class="o_auth_oauth_providers list-group mt-1 mb-1 text-left">-->
+                    <!--<a class="list-group-item list-group-item-action py-2" href="/web/ts24-signin">-->
+                        <!--<i class="fa fa-fw o_custom_icon"></i>-->
+                        <!--Log in with TS24 Pro-->
+                    <!--</a>-->
+                <!--</div>-->
+            <!--</xpath>-->
+        <!--</template>-->
+
+        <!--<template id="ts_signup.remove_user_logo" inherit_id="web.login_layout">-->
+            <!--<xpath expr="//img" position="replace">-->
+                <!--<img t-attf-src="https://vww.ts24.com.vn/images/ts24pro_logo.png" alt="Logo" style="max-height:120px; max-width: 100%; width:auto"/>-->
+            <!--</xpath>-->
+        <!--</template>-->
+
+    <!--</data>-->
+<!--</odoo>-->

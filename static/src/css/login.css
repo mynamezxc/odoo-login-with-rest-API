@@ -1,0 +1,14 @@
+.ts24_custom_icon {
+    margin: 0 0.15em;
+    width: 1em;
+    height: 1em;
+    border: 3px solid #104dbb;
+    border-radius: 100%;
+    transform: translateY(2px);
+}
+
+.icon-ts24{
+    padding-left: 20px;
+    padding-top:4px;
+    background:  url("../images/icon-ts24.png") no-repeat;
+}
